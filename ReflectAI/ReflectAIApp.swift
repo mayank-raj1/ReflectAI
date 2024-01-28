@@ -25,7 +25,7 @@ struct ReflectAIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EntryDetailedView(entry: MocData.e1, makingEntry: .constant(true))
         }
         .modelContainer(sharedModelContainer)
     }
