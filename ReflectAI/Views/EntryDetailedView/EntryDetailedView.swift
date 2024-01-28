@@ -43,5 +43,5 @@ struct EntryDetailedView: View {
 }
 
 #Preview {
-    EntryDetailedView(entry: MocData.e1, makingEntry: .constant(true))
+    EntryDetailedView(entry: MocData.sampleEntry, makingEntry: .constant(true))
 }
