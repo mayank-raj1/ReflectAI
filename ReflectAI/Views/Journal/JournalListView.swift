@@ -11,7 +11,7 @@ struct JournalListView: View {
     @EnvironmentObject var journal: Journal
     var body: some View {
         ForEach(journal.entries) { entry in
-            EntryListView(entry: entry)
+            EntryListView(entry: entry).padding()
         }
     }
 }
