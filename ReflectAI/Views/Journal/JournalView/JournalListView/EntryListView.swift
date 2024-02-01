@@ -11,17 +11,21 @@ struct EntryListView: View {
     var entry: Entry
     @State private var isShowingFullEntry = false
     var body: some View {
+        ZStack{
+            RoundedRectangle(cornerRadius: 25.0).foregroundStyle(.background)
             VStack(alignment: .leading) {
                 Text(entry.heading).font(.title3).fontWeight(.medium).padding(.bottom, 5)
                 Text(entry.entry).lineLimit(isShowingFullEntry ? .max : 3).lineSpacing(5)
-                Divider().padding([.leading, .trailing])
-                Text(entry.date.formated()).font(.caption)
-            }
-            .padding()
-            .clipShape(.rect(cornerRadius: 10), style: FillStyle())
-            .onTapGesture {
-                isShowingFullEntry.toggle()
-            }
+                Divider()
+                Text(entry.date.formated()).font(.caption).foregroundStyle(.secondary)
+            }.padding()
+        }
+        .padding(5)
+
+        .shadow(radius: 10)
+        .onTapGesture(perform: {
+            isShowingFullEntry.toggle()
+        })
 
     }
 }

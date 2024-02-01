@@ -27,4 +27,16 @@ final class Journal: ObservableObject, Codable{
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(entries, forKey: .entries)
     }
+    
+    func addEntry(entry: Entry) -> Void {
+        if (!self.entries.contains(where: { en in
+            return en == entry
+        })){
+            entries.append(entry)
+        }
+    }
+    
+    var newEntry: Entry {
+        return Entry()
+    }
 }

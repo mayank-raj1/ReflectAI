@@ -15,13 +15,13 @@ struct EntryDetailedView: View {
         VStack{
             HStack{
                 Button("Cancel") {
-                    
+                    makingEntry = false
                 }.font(.title3)
                 Spacer()
                 Label("\(entry.date.toString())", systemImage: "note.text").font(.title3)
                 Spacer()
                 Button("Done", action: {
-                    
+                    makingEntry = false
                 }).font(.title3)
             }.padding()
             ScrollView{

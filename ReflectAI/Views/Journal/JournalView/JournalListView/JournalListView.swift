@@ -10,9 +10,9 @@ import SwiftUI
 struct JournalListView: View {
     @EnvironmentObject var journal: Journal
     var body: some View {
-        ForEach(journal.entries) { entry in
-            EntryListView(entry: entry).padding()
-        }
+        List($journal.entries) { entry in
+            EntryListView(entry: entry.wrappedValue)
+        }.listStyle(.plain)
     }
 }
 

@@ -9,12 +9,16 @@ import Foundation
 import SwiftUI
 
 final class Entry: ObservableObject, Codable, Identifiable{
+    static func == (lhs: Entry, rhs: Entry) -> Bool {
+        return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
+    }
+    
     let id: UUID
     var date: Date
     var heading: String
     @Published var entry: String
     
-    init(id: UUID = UUID(), date: Date = Date(), entry: String, heading: String = "Morning Outage to meh") {
+    init(id: UUID = UUID(), date: Date = Date(), entry: String = "", heading: String = "Morning Outage to meh") {
         self.id = id
         self.date = date
         self.heading = heading

@@ -11,9 +11,9 @@ struct MainPageTabView: View {
     var body: some View {
         VStack{
             TabView{
-                
+                JournalVIew().tabItem { Label("Lisjt", image: "person.fill") }
             }
-        }
+        }.environmentObject(MocData.sampleJournal)
     }
 }
 
