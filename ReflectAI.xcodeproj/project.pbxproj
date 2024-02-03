@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E5466E982B6B1D9D0058577A /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5466E972B6B1D9D0058577A /* JournalView.swift */; };
+		E5692E412B6EEAA9001E1885 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5692E402B6EEAA9001E1885 /* AccountView.swift */; };
 		E578FE952B656A2B000BFFB7 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578FE942B656A2B000BFFB7 /* Entry.swift */; };
 		E578FE982B657040000BFFB7 /* EntryDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578FE972B657040000BFFB7 /* EntryDetailedView.swift */; };
 		E578FE9A2B663958000BFFB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578FE992B663958000BFFB7 /* Extensions.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		E5466E972B6B1D9D0058577A /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		E5692E402B6EEAA9001E1885 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		E578FE942B656A2B000BFFB7 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		E578FE972B657040000BFFB7 /* EntryDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailedView.swift; sourceTree = "<group>"; };
 		E578FE992B663958000BFFB7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -50,27 +52,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E5466E962B6B1D7A0058577A /* JournalView */ = {
+		E5466E992B6B25F10058577A /* Journal */ = {
 			isa = PBXGroup;
 			children = (
 				E578FEA52B670564000BFFB7 /* JournalListView */,
 				E5466E972B6B1D9D0058577A /* JournalView.swift */,
 				E578FE962B656FC9000BFFB7 /* EntryDetailedView */,
 			);
-			path = JournalView;
+			path = Journal;
 			sourceTree = "<group>";
 		};
-		E5466E992B6B25F10058577A /* Journal */ = {
+		E5692E3F2B6EEA9E001E1885 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				E5466E962B6B1D7A0058577A /* JournalView */,
+				E5692E402B6EEAA9001E1885 /* AccountView.swift */,
 			);
-			path = Journal;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		E578FE912B648005000BFFB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5692E3F2B6EEA9E001E1885 /* Account */,
 				E5466E992B6B25F10058577A /* Journal */,
 				E578FEAA2B670763000BFFB7 /* Components */,
 				E578FE9F2B6703E2000BFFB7 /* MainView */,
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5692E412B6EEAA9001E1885 /* AccountView.swift in Sources */,
 				E578FE952B656A2B000BFFB7 /* Entry.swift in Sources */,
 				E578FEA32B67042A000BFFB7 /* MocData.swift in Sources */,
 				E578FE9A2B663958000BFFB7 /* Extensions.swift in Sources */,
