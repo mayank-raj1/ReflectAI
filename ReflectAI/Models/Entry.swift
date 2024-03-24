@@ -7,8 +7,10 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
-struct Entry: Codable, Identifiable, Hashable{
+@Model
+final class Entry: Identifiable, Hashable, Codable, ObservableObject{
     static func == (lhs: Entry, rhs: Entry) -> Bool {
         return lhs.id == rhs.id
     }
@@ -16,7 +18,17 @@ struct Entry: Codable, Identifiable, Hashable{
     let id: UUID
     var date: Date = Date.now
     var entry: String = ""
+    var heading: String = ""
     
+    init() {
+        id = UUID()
+    }
+    
+    init(heading: String, entry: String) {
+        self.entry = entry
+        self.heading = heading
+        id = UUID()
+    }
     
     private enum CodingKeys: String, CodingKey {
         case id

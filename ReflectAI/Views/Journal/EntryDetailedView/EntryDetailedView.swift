@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EntryDetailedView: View {
-    @ObservedObject var entry: Entry
+    @Bindable var entry: Entry
     @FocusState private var isfocused: Bool
     @Binding var makingEntry: Bool
     var body: some View {
