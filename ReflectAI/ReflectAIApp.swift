@@ -14,5 +14,6 @@ struct ReflectAIApp: App {
         WindowGroup {
             MainPageTabView()
         }
+        .modelContainer(for: [User.self, Entry.self])
     }
 }

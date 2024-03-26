@@ -29,7 +29,7 @@ struct EntryListView: View {
 
     }
 }
-
-#Preview {
-    EntryListView(entry: MocData.sampleEntry)
-}
+//
+//#Preview {
+//    EntryListView(entry: MocData.sampleEntry)
+//}

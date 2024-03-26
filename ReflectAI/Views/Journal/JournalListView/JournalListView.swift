@@ -6,17 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct JournalListView: View {
-    @EnvironmentObject var journal: Journal
+    
     var body: some View {
         List($journal.entries) { entry in
             EntryListView(entry: entry.wrappedValue)
         }.listStyle(.plain)
     }
-}
-
-
-#Preview {
-    JournalListView().environmentObject(MocData.sampleJournal)
 }

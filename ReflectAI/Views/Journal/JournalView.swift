@@ -9,7 +9,8 @@ import SwiftUI
 
 struct JournalVIew: View {
     @State var isAddingEntry: Bool = false
-    @EnvironmentObject var journal: Journal
+    var entries: [Entry] = []
+    
     
     var body: some View {
         VStack{
@@ -22,11 +23,11 @@ struct JournalVIew: View {
             }).buttonStyle(.borderedProminent).buttonBorderShape(.circle)
         })
         .sheet(isPresented: $isAddingEntry, content: {
-            EntryDetailedView(entry: journal.newEntry, makingEntry: $isAddingEntry)
+            //EntryDetailedView(entry: journal.newEntry, makingEntry: $isAddingEntry)
         })
     }
 }
 
 #Preview {
-    JournalVIew().environmentObject(MocData.sampleJournal)
+    JournalVIew()
 }

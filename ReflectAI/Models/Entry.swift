@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftData
 
 @Model
-final class Entry: Identifiable, Hashable, Codable, ObservableObject{
+final class Entry: Identifiable, Hashable, Codable{
     static func == (lhs: Entry, rhs: Entry) -> Bool {
         return lhs.id == rhs.id
     }

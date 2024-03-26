@@ -21,10 +21,10 @@ struct MainPageTabView: View {
                 }
             }.tabViewStyle(.page)
         }
-        .environmentObject(MocData.sampleJournal)
+//        .environmentObject(MocData.sampleJournal)
     }
 }
 
 #Preview {
-    MainPageTabView()
+    MainPageTabView().modelContainer(for: [User.self, Entry.self])
 }
